@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].js',
       publicPath: '/',  
-      clean: false,
+      clean: true,  // ← true yap (eski dosyalar temizlensin)
     },
     module: {
       rules: [
@@ -26,7 +26,7 @@ module.exports = (env, argv) => {
         {
           test: /\.scss$/,
           use: [
-            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,  // ← style-loader kaldır
             'css-loader',
             'postcss-loader',
             'sass-loader',
@@ -35,7 +35,7 @@ module.exports = (env, argv) => {
         {
           test: /\.css$/,
           use: [
-            isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+            MiniCssExtractPlugin.loader,  // ← style-loader kaldır
             'css-loader',
             'postcss-loader',
           ],
@@ -43,6 +43,7 @@ module.exports = (env, argv) => {
       ],
     },
     plugins: [
+      new CleanWebpackPlugin(),  // ← Geri ekle
       
       new HtmlWebpackPlugin({
         template: './src/views/pages/index.pug',
@@ -60,7 +61,6 @@ module.exports = (env, argv) => {
       
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
-        
       }),
     ],
     devServer: {
@@ -72,6 +72,7 @@ module.exports = (env, argv) => {
       hot: true,
       open: true,
       watchFiles: ['src/**/*'],
+      liveReload: true,  // ← Ekle
     },
     devtool: isDevelopment ? 'source-map' : false,
   };

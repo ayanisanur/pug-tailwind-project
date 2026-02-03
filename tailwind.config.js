@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
+    "./src/**/*.{pug,html,js}",
+    "./src/views/**/*.pug",
+    "./src/views/pages/**/*.pug",
     "./src/views/layouts/**/*.pug",
-    "./src/views/partials/**/*.pug"
+    "./src/views/partials/**/*.pug",
   ],
   corePlugins: {
     preflight: false,

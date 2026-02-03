@@ -1,3 +1,4 @@
+import '../styles/pages/detail.scss';
 let sideCurrentIndex = 0;
 let sideTimer;
 const sideTitles = [

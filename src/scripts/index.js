@@ -1,3 +1,4 @@
+import '../styles/pages/index.scss';
 let currentIndex = 0;
 let timer;
 
