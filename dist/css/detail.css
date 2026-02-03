@@ -114,6 +114,9 @@
     margin: 0px;
     padding: 0px;
   }
+  footer {
+    background-color: #f6f6f6;
+  }
 .container {
     width: 100%;
 }
@@ -168,9 +171,6 @@
   }
 .sitemap ul li a {
     text-decoration: none;
-  }
-* {
-    background-color: #f6f6f6;
   }
 .divider-info {
     margin-top: 1px;
