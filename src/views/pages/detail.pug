@@ -9,13 +9,13 @@ block content
     html, body { overflow-x: hidden; width: 100%; }
 
 
-  main.main.block
+  main
     section.block
         .malker.mx-auto.bg-gray-200.flex.items-center.justify-center.w-full(class="h-[250px]")
             .bilboard.flex.bg-gray-100.h-full.items-center.justify-center(class="w-[970px]")
                 h2.text-2xl.font-bold.text-gray-500 BILLBOARD
 
-        .mx-auto.container.my-5.px-4
+        .mx-auto.container.my-5
             //- Breadcrumb
             .breadcrumb.flex.items-center
                 nav.flex.items-center.gap-2.text-xxs.p-0.m-0(class="sm:text-xs")
@@ -39,7 +39,7 @@ block content
                 .article-wrapper.flex.flex-col.gap-3.h-full.w-full(class="lg:flex-1 lg:min-w-0")
                     article.flex.flex-col.gap-6.w-full.max-w-full.m-0.p-0
                         .article-title.m-0
-                            h1.font-bold.leading-tight.m-0(class="text-4xl lg:text-9xl") Dikkat: Yapay zeka sizi dinliyor olabilir! Mahremiyet tehlikede mi?
+                            h1.font-bold.m-0(class="text-4xl lg:text-9xl leading-[100%]") Dikkat: Yapay zeka sizi dinliyor olabilir! Mahremiyet tehlikede mi?
                         
                         .article-info.flex.flex-row.gap-1
                             .flex.flex-col.justify-between.items-start.w-full.flex-wrap
@@ -50,7 +50,7 @@ block content
                                     .flex-col.justify-between.items-start 
                                         span.text-black.text-xs Son Güncelleme: 
                                         time.color-dark.text-xs 16 Aralık 2025 12:12
-                                .flex.flex-row.gap-1.items-center.flex-wrap.mt-2
+                                .flex.flex-row.gap-1.items-center.flex-wrap
                                     span.font-bold.text-black.text-xs ahaber.com.tr - Özel Haber
                                     .divider-info 
                                     span.font-bold.text-black.text-xs Büşra Arga
@@ -59,7 +59,7 @@ block content
                                     <svg xmlns="http://www.w3.org/2000/svg" width="86" height="16" viewBox="0 0 86 16" fill="none"><g clip-path="url(#a)"><path style="fill:#4885ED" d="M5.932 5.876v1.588h3.809c-.115.9-.421 1.55-.862 2.01-.555.554-1.435 1.167-2.947 1.167-2.353 0-4.19-1.895-4.19-4.248 0-2.354 1.837-4.249 4.19-4.249 1.263 0 2.201.498 2.87 1.148l1.13-1.129c-.957-.918-2.22-1.626-4-1.626C2.717.537 0 3.158 0 6.373c0 3.215 2.698 5.837 5.932 5.837 1.742 0 3.043-.574 4.076-1.627 1.053-1.052 1.378-2.545 1.378-3.731 0-.364-.019-.708-.076-.995-.02.019-5.378.019-5.378.019Z"></path><path fill="#EF2B30" d="M16.151 4.574c-2.085 0-3.789 1.589-3.789 3.77 0 2.182 1.704 3.77 3.79 3.77 2.085 0 3.788-1.588 3.788-3.77 0-2.181-1.703-3.77-3.789-3.77Zm0 6.048c-1.148 0-2.124-.938-2.124-2.278s.995-2.277 2.124-2.277c1.13 0 2.125.938 2.125 2.277 0 1.34-.976 2.278-2.125 2.278Z"></path><path fill="#4885ED" d="M34.713 5.416h-.057c-.364-.44-1.09-.842-1.99-.842-1.876 0-3.521 1.646-3.521 3.77 0 2.125 1.645 3.77 3.52 3.77.9 0 1.608-.402 1.99-.86h.058v.516c0 1.435-.765 2.22-2.01 2.22-1.013 0-1.645-.728-1.894-1.34l-1.435.593c.421.995 1.512 2.22 3.35 2.22 1.932 0 3.578-1.148 3.578-3.923V4.766h-1.57v.65h-.019ZM32.8 10.622c-1.149 0-2.01-.976-2.01-2.278 0-1.3.861-2.277 2.01-2.277 1.148 0 2.009.976 2.009 2.297.02 1.3-.88 2.258-2.01 2.258Z"></path><path fill="#FFCA0C" d="M24.59 4.574c-2.085 0-3.788 1.589-3.788 3.77 0 2.182 1.703 3.77 3.789 3.77 2.086 0 3.789-1.588 3.789-3.77 0-2.181-1.703-3.77-3.79-3.77Zm0 6.048c-1.147 0-2.123-.938-2.123-2.278s.995-2.277 2.124-2.277 2.124.938 2.124 2.277c0 1.34-.976 2.278-2.124 2.278Z"></path><path fill="#39CD55" d="M37.584.709h1.627v11.405h-1.627V.71Z"></path><path fill="#EF2B30" d="M44.244 10.622c-.842 0-1.435-.383-1.837-1.149l5.052-2.085-.172-.421c-.306-.842-1.282-2.412-3.234-2.412s-3.56 1.531-3.56 3.77c0 2.24 1.588 3.77 3.732 3.77 1.722 0 2.717-1.052 3.138-1.665l-1.282-.86c-.42.65-.995 1.052-1.837 1.052ZM44.11 5.99c.67 0 1.244.344 1.435.822L42.14 8.23c0-1.589 1.129-2.24 1.971-2.24Z"></path><path class="group-hover:fill-white" fill="#767676" d="M52.147 12.19V1.858h1.607l5.033 8.037h.057l-.057-1.99V1.857h1.32v10.334H58.73l-5.263-8.44h-.057l.057 1.99v6.43h-1.32v.02Zm13.032.25c-1.072 0-1.933-.364-2.603-1.072-.67-.708-.995-1.608-.995-2.698 0-1.034.325-1.914.976-2.66.65-.747 1.473-1.11 2.488-1.11 1.014 0 1.894.344 2.526 1.033.631.69.937 1.608.937 2.737l-.019.248h-5.588c.038.709.268 1.283.708 1.684.44.421.957.613 1.531.613.957 0 1.589-.402 1.933-1.206l1.187.498c-.23.555-.613 1.014-1.149 1.378-.516.363-1.167.555-1.933.555Zm1.913-4.631c-.038-.402-.21-.785-.555-1.149-.344-.363-.842-.555-1.53-.555-.498 0-.92.153-1.283.46-.363.306-.612.727-.746 1.244h4.114Zm10.353 4.382h-1.359l-1.76-5.435-1.742 5.435h-1.34l-2.276-7.08h1.377l1.57 5.338h.019l1.741-5.339h1.378l1.742 5.34h.019l1.55-5.34h1.358l-2.277 7.08Zm5.78.249c-.785 0-1.436-.192-1.953-.574a3.326 3.326 0 0 1-1.129-1.436l1.187-.497c.383.88 1.014 1.32 1.913 1.32.422 0 .747-.095 1.015-.268.268-.191.402-.42.402-.727 0-.46-.326-.765-.976-.938l-1.436-.344a3.263 3.263 0 0 1-1.282-.65 1.606 1.606 0 0 1-.612-1.302c0-.632.268-1.13.823-1.531.555-.383 1.205-.593 1.97-.593.632 0 1.187.134 1.685.42a2.36 2.36 0 0 1 1.052 1.226l-1.148.478c-.268-.632-.804-.938-1.627-.938-.401 0-.727.077-.995.249-.267.172-.401.383-.401.67 0 .402.306.67.937.823l1.397.325c.67.153 1.148.421 1.474.785.325.382.478.803.478 1.263 0 .631-.268 1.167-.784 1.588-.498.44-1.168.65-1.99.65Z"></path></g><defs><clipPath id="a"><path class="fill-current" d="M0 .537h86v14.927H0z"></path></clipPath></defs></svg>
                                 a.x-share-btn.border.border-solid.flex.items-center.justify-center.rounded-full.transition-all.w-8.h-8(class="border-[#bab6b6] hover:bg-black lg:w-10 lg:h-10")(href="")
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none"><path class="" fill="#767676" d="M8.303 6.428 13.403.5h-1.209L7.766 5.647 4.23.5H.15L5.5 8.284.15 14.5H1.36l4.676-5.436L9.77 14.5h4.08L8.302 6.428ZM6.648 8.352l-.542-.775L1.794 1.41h1.857L7.13 6.387l.542.775 4.523 6.47h-1.856l-3.691-5.28Z"></path></svg>
-                                a.whatsapp-share-btn.group.border.border-solid.flex.items-center.justify-center.rounded-full.transition-all.w-8.h-8(class="border-[#bab6b6] hover:bg-[#c10871] lg:w-10 lg:h-10")(href="")
+                                a.whatsapp-share-btn.group.border.border-solid.flex.items-center.justify-center.rounded-full.transition-all.w-8.h-8(class="border-[#bab6b6] hover:bg-[#2ac108] lg:w-10 lg:h-10")(href="")
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none"><path class="fill-[#2ac108] transition-colors group-hover:fill-white" d="M13.668 2.787A7.89 7.89 0 0 0 8.032.442C3.642.442.064 4.028.064 8.428c0 1.41.37 2.78 1.062 3.988L0 16.558l4.221-1.112a7.956 7.956 0 0 0 3.811.975c4.39 0 7.968-3.586 7.968-7.985a7.944 7.944 0 0 0-2.332-5.65Zm-5.636 12.28a6.632 6.632 0 0 1-3.377-.926l-.24-.145-2.51.66.668-2.45-.16-.249a6.67 6.67 0 0 1-1.014-3.53c0-3.658 2.975-6.64 6.625-6.64 1.769 0 3.433.694 4.68 1.95a6.594 6.594 0 0 1 1.937 4.699c.016 3.658-2.959 6.631-6.609 6.631Zm3.634-4.963c-.2-.097-1.182-.58-1.359-.653-.184-.065-.313-.097-.45.097-.136.201-.514.652-.627.781-.112.137-.233.153-.434.049-.201-.097-.844-.315-1.6-.992-.595-.531-.989-1.184-1.11-1.386-.112-.201-.016-.306.089-.41.088-.09.2-.234.297-.347.097-.113.137-.201.201-.33.065-.137.033-.25-.016-.347-.048-.097-.45-1.08-.61-1.483-.162-.386-.33-.338-.451-.346H5.21a.722.722 0 0 0-.53.25c-.177.201-.692.685-.692 1.668 0 .983.716 1.934.812 2.063.096.137 1.407 2.151 3.401 3.013.474.21.844.33 1.134.42.474.152.908.128 1.254.08.386-.056 1.182-.483 1.343-.95.168-.468.168-.863.112-.952-.056-.088-.177-.129-.378-.225Z"></path></svg>
                                 .relative.inline-block
                                     button#share-btn.bg-transparent.m-0.p-0.relative.border.border-solid.flex.items-center.justify-center.rounded-full.transition-all.w-8.h-8.cursor-pointer(class="border-[#bab6b6] hover:bg-[#2d445b] lg:w-10 lg:h-10")
@@ -92,7 +92,7 @@ block content
                                             .text-btn.flex.flex-row.items-center(class="gap-[1.5] lg:gap-3")
                                                 .text-xs.font-bold
                                                     | YAZI
-                                                .text-btn.group.border.border-solid.flex.items-center.justify-center.rounded-full.transition-all(class="border-[#bab6b6] h-8 lg:h-10 w-[103px]")
+                                                .text-btn.group.border.border-solid.flex.items-center.justify-center.rounded-full.transition-all.gap-2(class="border-[#bab6b6] h-8 lg:h-10 w-[103px]")
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="14" viewBox="0 0 24 14" class="w-6 h-3.5" style="" fill="none"><path class="fill-current" d="M0 13.5 5.742.81h1.944L13.5 13.5h-2.358L9.594 9.936l.936.63H2.916l.972-.63L2.34 13.5H0ZM6.696 3.294 4.158 9.306l-.468-.558h6.048l-.378.558-2.592-6.012h-.072ZM18.234 13.68c-.792 0-1.488-.186-2.088-.558-.6-.384-1.068-.93-1.404-1.638-.336-.708-.504-1.554-.504-2.538 0-.984.168-1.824.504-2.52.336-.708.804-1.248 1.404-1.62.6-.384 1.296-.576 2.088-.576.768 0 1.44.192 2.016.576.588.372.978.876 1.17 1.512h-.198l.198-1.908h2.16l-.108 1.134a18.18 18.18 0 0 0-.036 1.134V13.5h-2.232l-.018-1.872h.216c-.192.624-.582 1.122-1.17 1.494-.588.372-1.254.558-1.998.558Zm.63-1.728c.708 0 1.278-.246 1.71-.738.432-.504.648-1.26.648-2.268 0-1.008-.216-1.758-.648-2.25-.432-.492-1.002-.738-1.71-.738s-1.278.246-1.71.738c-.432.492-.648 1.242-.648 2.25s.21 1.764.63 2.268c.432.492 1.008.738 1.728.738Z"></path></svg>
                                                     button.decrease-btn.border-none.bg-transparent
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="2" viewBox="0 0 16 2" class="w-4 h-4" style="" fill="none"><path class="stroke-current" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h14"></path></svg>
@@ -159,7 +159,7 @@ block content
                                     |  ve
                                     strong  "Karşımdaki kameramanın tişörtü hangi renk?"
                                     |  sorularına yapay zekanın doğru yanıtlar vermesi üzerine şu değerlendirmeyi yaptı.
-                                    
+                                     
                                 .w-full
                                     img.w-full.h-auto.block(alt="(foto: ahaber.com.tr)" src="https://iaahbr.tmgrup.com.tr/36ac90/0/0/0/0/0/0?u=https://iahbr.tmgrup.com.tr/2025/12/10/1765368502471.jpg&amp;mw=700" title="1765368502471.jpg")
                                     .w-full.bg-vanilla.border-b.border-ink

@@ -11,69 +11,108 @@ module.exports = (env, argv) => {
       index: './src/scripts/index.js',
       detail: './src/scripts/detail.js',
     },
+
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].js',
-      publicPath: '/',  
-      clean: true,  // ← true yap (eski dosyalar temizlensin)
+      publicPath: '/',
+      clean: true,
     },
+
     module: {
       rules: [
+        // 🔹 INDEX SCSS
+        {
+          test: /index\.scss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    require('tailwindcss')('./tailwind.index.config.js'),
+                    require('autoprefixer'),
+                  ],
+                },
+              },
+            },
+            'sass-loader',
+          ],
+        },
+
+        // 🔹 DETAIL SCSS
+        {
+          test: /detail\.scss$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            {
+              loader: 'postcss-loader',
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    require('tailwindcss')('./tailwind.detail.config.js'),
+                    require('autoprefixer'),
+                  ],
+                },
+              },
+            },
+            'sass-loader',
+          ],
+        },
+
+        // 🔹 PURE CSS (vendor vs)
+        {
+          test: /\.css$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+          ],
+        },
+
+        // 🔹 PUG
         {
           test: /\.pug$/,
           use: ['pug-loader'],
         },
-        {
-          test: /\.scss$/,
-          use: [
-            MiniCssExtractPlugin.loader,  // ← style-loader kaldır
-            'css-loader',
-            'postcss-loader',
-            'sass-loader',
-          ],
-        },
-        {
-          test: /\.css$/,
-          use: [
-            MiniCssExtractPlugin.loader,  // ← style-loader kaldır
-            'css-loader',
-            'postcss-loader',
-          ],
-        },
       ],
     },
+
     plugins: [
-      new CleanWebpackPlugin(),  // ← Geri ekle
-      
+      new CleanWebpackPlugin(),
+
       new HtmlWebpackPlugin({
         template: './src/views/pages/index.pug',
         filename: 'index.html',
         chunks: ['index'],
         minify: !isDevelopment,
       }),
-      
+
       new HtmlWebpackPlugin({
         template: './src/views/pages/detail.pug',
         filename: 'detail.html',
         chunks: ['detail'],
         minify: !isDevelopment,
       }),
-      
+
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
     ],
+
     devServer: {
       static: {
         directory: path.join(__dirname, 'dist'),
       },
-      compress: true,
+      compress: false,
       port: 3000,
-      hot: true,
       open: true,
+      hot: true,
       watchFiles: ['src/**/*'],
-      liveReload: true,  // ← Ekle
     },
+
     devtool: isDevelopment ? 'source-map' : false,
   };
 };
