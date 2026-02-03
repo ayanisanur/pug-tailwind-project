@@ -1,0 +1,20 @@
+@use '../variables' as *;
+@use '../common.scss';
+
+// 2. Detail'e özel componentler
+@layer components {
+  .divider-info {
+    margin-top: 1px;
+    height: 12px;
+    width: 2px;
+    background: #8b8b9f;
+  }
+  
+  .category-title {
+    &-line { 
+      background: $brand-red;
+    }
+  }
+  
+  // Detail'e özel diğer stiller...
+}

@@ -1,0 +1,13 @@
+@use 'variables' as *;  
+@layer components {
+  .sitemap ul li {
+    font-size: x-small;
+    
+    a {
+      text-decoration: none;
+    }
+  }
+  *{
+    background-color: $color-bone;
+  }
+}

@@ -1,0 +1,151 @@
+extends ../layouts/main.pug
+block styles
+  link(rel="stylesheet", href="css/index.css")
+block content
+  style.
+
+    img { display: block; }
+    
+    * { box-sizing: border-box; }
+  main.main.block
+    section.section.block(class="pb-12  md:pb-16")
+      .malker.mx-auto.bg-gray-200.flex.items-center.justify-center.w-full(class="h-[250px]")
+        .bilboard.flex.bg-gray-100.h-full.items-center.justify-center(class="w-[970px]")
+          h2.text-2xl.font-bold.text-gray-500 BILLBOARD
+      .container.py-6.mx-auto
+        .breadcrumb.flex.items-center(class=" px-[1rem]")
+          nav.flex.items-center.gap-2
+            a.color-dark.transition-all(href="#" class="hover:underline text-xs ") A Haber
+            svg(xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" class="w-auto h-[10px] fill-current text-gray-400")
+              path(d="M.204 10.306a.697.697 0 0 0 .49.194.722.722 0 0 0 .49-.194l4.654-4.434A.524.524 0 0 0 6 5.5a.504.504 0 0 0-.162-.372L1.184.694a.716.716 0 0 0-.98 0 .637.637 0 0 0 0 .933l4.062 3.87L.2 9.373a.642.642 0 0 0 .005.933Z")
+            span.font-bold.text-xs.inline-block Teknoloji Haberleri
+
+        .category-title.flex.items-center.justify-start.gap-2(class="mt-5 md:mt-6 px-[1rem] ")
+          h1.font-bold.brand-red.leading-none(class="lg:text-7xl text-3xl") TEKNOLOJİ
+          span-line.mt-1.flex.ml-1.flex-shrink-0
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 13" class="w-auto h-[14px] flex-shrink-0 brand-red" fill="none"><path class="stroke-current" stroke-linecap="round" d="M1.764 11.622A20 20 0 0 1 1.759.69"></path><path class="stroke-current" stroke-linecap="round" stroke-width="2" d="M11.63 11.13a20 20 0 0 1 .009-9.997"></path><path class="stroke-current" stroke-linecap="round" stroke-width="3" d="M21.515 10.658a20 20 0 0 1-.025-8.909"></path><path class="stroke-current" stroke-linecap="round" stroke-width="4" d="M31.404 10.148a20 20 0 0 1-.017-7.917"></path><path class="stroke-current" stroke-linecap="round" stroke-width="5" d="M41.5 9.592a20 20 0 0 1-.347-6.916"></path></svg>
+          .line.w-full.rounded-full.border-none(class="h-3 md:h-3 bg-brand-red")
+
+        - 
+          var slides = [
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Yapay Zeka Dünyasında Yeni Gelişme" },
+            { img: "https://iaahbr.tmgrup.com.tr/215412/747/747/427/0/1280/853?u=https://iahbr.tmgrup.com.tr/2026/01/21/whatsappin-yeni-ozelliklerini-ilk-siz-kullanin-erken-erisim-butonu-ekleniyor-1769024041038.jpg", title: "WhatsApp'a erken erişim butonu ekleniyor" },
+            { img: "https://iaahbr.tmgrup.com.tr/cd94fa/747/747/279/0/765/486?u=https://iahbr.tmgrup.com.tr/2026/01/23/google-gemini-artik-sizi-daha-iyi-taniyacak-kisisel-zeka-ozelligi-geliyor-1769194661206.jpg", title: "Geleceğin Meslekleri Neler?" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Mobil Uygulama Trendleri" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Siber Güvenlik Önlemleri" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Donanım Dünyasında Son Durum" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Yazılım Mühendisliği İpuçları" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "ChatGPT'ye kaba yazınca daha iyi yanıt mı veriyor?" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Veri Bilimi ve Analiz" },
+            { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Blockchain Teknolojisi" }
+          ]
+        .flex.flex-col.items-start.w-full.gap-6.pt-10(class="lg:flex-row lg:gap-8")
+          .slider-wrapper.flex.flex-col.gap-3.w-full(class="lg:w-[634px] px-[1rem] xl:px-0")
+            .default-slider.relative.overflow-hidden.w-full.max-w-full
+              .slides-container.flex.transition-transform.duration-500.ease-in-out.h-full
+                each item, index in slides
+                  .slide-item.w-full.min-w-full.flex-shrink-0.relative
+                    a.block.no-underline(href="")
+                      img.w-full.h-full.object-cover.block(
+                        src=item.img 
+                        loading=(index === 0 ? "eager" : "lazy")
+                        alt=item.title
+                       )
+                      .absolute(class="left-3 right-3 bottom-6 md:left-6 md:right-6")
+                        h2.text-white.font-bold.leading-tight(class="text-2xl md:text-5xl") !{item.title}
+
+              .pagination-btn.flex.items-center.justify-between.w-full.absolute.inset-0.pointer-events-none
+                button(onclick="moveSlide(-1)").relative.rounded-xl.text-white.transition-all.pointer-events-auto.border-none(class="left-2 md:left-3 p-2 md:p-2.5 bg-[#00000066]")
+                  img.cursor-pointer(src="https://d5bgli14zfowz.cloudfront.net/images/icons/carousel-left.svg", loading="lazy" alt="" class="w-3.5 h-3.5 md:w-5 md:h-5") 
+                button(onclick="moveSlide(1)").relative.rounded-xl.text-white.transition-all.pointer-events-auto.border-none(class="right-2 md:right-3 p-2 md:p-2.5 bg-[#00000066]")
+                  img.cursor-pointer(src="https://d5bgli14zfowz.cloudfront.net/images/icons/carousel-right.svg",loading="lazy" alt="" class="w-3.5 h-3.5 md:w-5 md:h-5")
+
+            .dots-wrapper.flex.items-center.justify-center(class="h-10 md:h-12")
+              #dots.flex.items-center.justify-center(class="gap-3 md:gap-5")
+                each item, index in slides
+                  button.dot.p-0.border-none(onclick=`goToSlide(${index})` onmouseenter=`goToSlide(${index})` )
+            
+            .divider-horizontal.w-full.hidden.border-none(class="lg:flex bg-[#e3d9d9] h-[1px]")
+
+          .category-right.flex.flex-col.bg-gray-100.w-full.overflow-hidden(class="flex-1 py-4")
+            .ad.flex.items-center.justify-center
+              a.block.no-underline(href="")  
+                <img src="https://tpc.googlesyndication.com/simgad/2197780099312762515" width="300" height="250" alt=""class="img_ad "loading="lazy">
+            .news-sidebar.flex.flex-col.px-4(class="mt-6 mb-5 lg:mt-14")
+              .border-none.m-0
+                figure.grid.grid-cols-3.gap-2.m-0(class="mb-6")
+                  .news-image
+                    a.block.no-underline(href="")
+                      <img src="https://iaahbr.tmgrup.com.tr/0cb41e/196/145/269/0/1554/950?u=https://iahbr.tmgrup.com.tr/2026/01/19/karne-hediyesinde-casper-farki-oyun-performans-ve-eglence-1768822607649.jpg" alt="Karne hediyesinde Casper farkı" width="196" height="145" loading="lazy" class="news-card-image b-lazy w-full h-full object-cover b-loade rounded-sm">
+                  figcaption.col-span-2.m-0
+                    a.no-underline.color-dark.transition-colors.duration-200(href="#" class="hover:brand-red")
+                      span.font-bold.text-sm.leading-tight(class="md:text-base")
+                        | PlayStation Plus ocak 2026 oyunları belli oldu!
+              
+              .border-0.border-t.border-solid.m-0(class="border-[#e3d9d9]")
+                figure.grid.grid-cols-3.gap-2.m-0(class="mt-6 mb-6")
+                  .news-image
+                    a.block.no-underline
+                      img.rounded-sm.w-full.h-auto.object-cover.block(src="https://iaahbr.tmgrup.com.tr/ca5ee0/230/162/119/0/809/486?u=https://iahbr.tmgrup.com.tr/2026/01/15/xiaomi-hyperos-3-guncellemesi-dagitimi-genisliyor-iste-guncelleme-alacak-modeller-1768465327007.jpg", alt="Haber Resmi" loading="lazy")
+                  figcaption.col-span-2.m-0
+                    a.no-underline.color-dark.transition-colors.duration-200(href="#" class="hover:brand-red")
+                      span.font-bold.text-sm.leading-tight(class="md:text-base")
+                        | Xiaomi HyperOS 3 güncellemesi dağıtımı genişliyor!
+              
+              .border-0.border-t.border-solid.m-0(class="border-[#e3d9d9]")
+                figure.grid.grid-cols-3.gap-2.m-0(class="mt-6")
+                  .news-image.overflow-hidden
+                    a.block.no-underline
+                      img(src="https://iaahbr.tmgrup.com.tr/09fdcc/230/162/46/0/736/486?u=https://iahbr.tmgrup.com.tr/2026/01/18/chatgptye-kaba-yazinca-daha-iyi-yanit-mi-veriyor-arastirma-yanitladi-1768734461142.jpg" alt="ChatGPT'ye kaba yazınca daha iyi yanıt mı veriyor?" width="230" height="162" loading="lazy" class="news-card-image block w-full h-full object-cover rounded-sm")
+                  figcaption.col-span-2.m-0
+                    a.no-underline.color-dark.transition-colors.duration-200(href="#" class="hover:brand-red")
+                      span.font-bold.text-sm.leading-tight(class="md:text-base")
+                        | Apple Creator Studio nedir, ne işe yarar?
+        .news-infinite(class="mt-6 md:mt-10 lg:mt-12 px-[1rem] ")
+          .grid.gap-4.overflow-hidden(class="grid-cols-2 md:grid-cols-4 lg:grid-cols-4 md:gap-6") 
+            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
+              figure.flex.flex-col.m-0.p-0
+                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
+                  a.no-underline(href="")
+                    <img src="https://iaahbr.tmgrup.com.tr/9323e2/375/176/0/0/2048/962?u=https://iahbr.tmgrup.com.tr/2025/11/29/vodafonedan-5gde-yapay-zeka-destekli-musteri-deneyimi-1764404944393.jpg" alt="Vodafone'dan 5G'de yapay zeka destekli müşteri deneyimi" loading="lazy" class="news-card-image b-lazy w-full h-full object-cover b-loaded" width="375" height="176">
+                figcaption.flex.flex-col.gap-2.m-0(class="p-3 md:p-4")
+                  a.no-underline.color-dark.flex.flex-col(href="#")
+                    span.font-bold.text-base.line-clamp-2.leading-snug
+                      | Vodafone'dan 5G'de yapay zeka destekli müşteri deneyimi
+            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
+              figure.flex.flex-col.m-0.p-0
+                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
+                  a.no-underline(href="")
+                    <img src="https://iaahbr.tmgrup.com.tr/1b2c9c/375/176/0/0/864/404?u=https://iahbr.tmgrup.com.tr/2025/12/01/bir-alo-ile-hayatiniz-kararmasin-uzmanlardan-yeni-dolandiricilik-uyarisi-1764571113482.jpeg" alt="Bir 'alo' ile hayatınız kararmasın!" loading="lazy" class="news-card-image b-lazy w-full h-full object-cover b-loaded" width="375" height="176">
+                figcaption.flex.flex-col.gap-2.m-0(class="p-3 md:p-4")
+                  a.no-underline.color-dark.flex.flex-col.gap-5(href="#")
+                    span.font-bold.text-base.line-clamp-2.leading-snug
+                      | Bir 'alo' ile hayatınız kararmasın!
+                    .hashtag 
+                      span.text-sm
+                        | #Banka
+            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
+              figure.flex.flex-col.m-0.p-0
+                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
+                  a.no-underline(href="")
+                    <img src="https://iaahbr.tmgrup.com.tr/8e920a/375/176/0/0/2048/960?u=https://iahbr.tmgrup.com.tr/2025/11/27/turk-telekom-genclik-markasi-selfy-ile-7-farkli-universitede-ilk-5g-deneyimini-sundu-1764244188532.jpg" alt="Selfy ile 7 farklı üniversitede ilk 5G deneyimini sunuldu" loading="lazy" class="news-card-image w-full h-full object-cover rounded-t-sm">
+                figcaption.flex.flex-col.gap-2.m-0(class="p-3 md:p-4")
+                  a.no-underline.color-dark.flex.flex-col.gap-5(href="#")
+                    span.font-bold.text-base.line-clamp-2.leading-snug
+                      | Selfy ile 7 farklı üniversitede ilk 5G deneyimini sunuldu  
+                    .hashtag 
+                      span.text-sm
+                        | #Türkiye
+            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
+              figure.flex.flex-col.m-0.p-0
+                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
+                  a.no-underline(href="")
+                    <img src="https://iaahbr.tmgrup.com.tr/964c6c/222/152/0/58/992/737?u=https://iahbr.tmgrup.com.tr/2025/12/03/1764758355458.jpg" alt="Türk Telekom teknolojisiyle engeller kalkıyor" loading="lazy" class="news-card-image w-full h-full object-cover rounded-t-sm">
+                figcaption.flex.flex-col.m-0(class="p-3 md:p-4")
+                  a.no-underline.color-dark.flex.flex-col.gap-5(href="#")
+                    span.font-bold.text-base.line-clamp-2.leading-snug
+                      | Türk Telekom teknolojisiyle engeller kalkıyor  
+                    .hashtag 
+                      span.text-sm
+                        | #Ebubekir Şahin
+

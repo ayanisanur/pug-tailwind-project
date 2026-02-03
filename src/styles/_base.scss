@@ -1,0 +1,17 @@
+@use 'variables' as *;  
+@layer base {
+  body {
+    margin: 0;
+  }
+  
+  * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  h1, h2, h3, p, figure, body, nav, article {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+ 
+}

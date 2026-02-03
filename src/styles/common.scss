@@ -1,0 +1,11 @@
+// TÜM @use KURALLARI EN BAŞTA!
+@use 'variables' as *;
+@use 'base';
+@use 'components';
+@use 'header';
+@use 'footer';
+
+// SONRA Tailwind direktifleri
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,17 @@
+@use 'variables' as *;  
+@layer components {
+  .container {
+    width: 100%;
+    max-width: 1060px;
+    margin-inline: auto;
+    box-sizing: border-box;
+  }
+
+  // Renk utility class'ları
+  .color-dark { color: $color-dark; }
+  .brand-red { color: $brand-red; }
+  .color-mist { color: $color-mist; }
+  .color-pagination { color: $color-pagination; }
+  .color-bone { color: $color-bone; }
+  .color-platinium { color: $color-platinium; }
+}

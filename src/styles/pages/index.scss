@@ -1,0 +1,12 @@
+@use '../common.scss';
+
+// 2. Index'e özel componentler
+@layer components {
+  .divider {
+    height: 25px;
+    width: 1px;
+    background: #e3d9d9;
+  }
+  
+  // Index'e özel diğer stiller...
+}
