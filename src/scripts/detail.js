@@ -44,11 +44,6 @@ function startSideAutoPlay() {
   }, 5000);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  updateSideSlider();
-  startSideAutoPlay();
-});
-
 
 
 
@@ -64,4 +59,14 @@ openBtn.addEventListener('click' , (e) =>{
     panel.classList.add('hidden');       
 });
 
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateSideSlider();
+  startSideAutoPlay();
+
+
+});
 

@@ -11,14 +11,14 @@ block content
         .bilboard.flex.bg-gray-100.h-full.items-center.justify-center(class="w-[970px]")
           h2.text-2xl.font-bold.text-gray-500 BILLBOARD
       .container.py-6.mx-auto
-        .breadcrumb.flex.items-center(class=" px-[1rem]")
+        .breadcrumb.flex.items-center(class="px-[1rem] xl:px-0")
           nav.flex.items-center.gap-2
             a.color-dark.transition-all(href="#" class="hover:underline text-xs ") A Haber
             svg(xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" class="w-auto h-[10px] fill-current text-gray-400")
               path(d="M.204 10.306a.697.697 0 0 0 .49.194.722.722 0 0 0 .49-.194l4.654-4.434A.524.524 0 0 0 6 5.5a.504.504 0 0 0-.162-.372L1.184.694a.716.716 0 0 0-.98 0 .637.637 0 0 0 0 .933l4.062 3.87L.2 9.373a.642.642 0 0 0 .005.933Z")
             span.font-bold.text-xs.inline-block Teknoloji Haberleri
 
-        .category-title.flex.items-center.justify-start.gap-2(class="mt-5 md:mt-6 px-[1rem] ")
+        .category-title.flex.items-center.justify-start.gap-2(class="mt-5 md:mt-6 px-[1rem] xl:px-0 ")
           h1.font-bold.brand-red.leading-none(class="lg:text-7xl text-3xl") TEKNOLOJİ
           span-line.mt-1.flex.ml-1.flex-shrink-0
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 13" class="w-auto h-[14px] flex-shrink-0 brand-red" fill="none"><path class="stroke-current" stroke-linecap="round" d="M1.764 11.622A20 20 0 0 1 1.759.69"></path><path class="stroke-current" stroke-linecap="round" stroke-width="2" d="M11.63 11.13a20 20 0 0 1 .009-9.997"></path><path class="stroke-current" stroke-linecap="round" stroke-width="3" d="M21.515 10.658a20 20 0 0 1-.025-8.909"></path><path class="stroke-current" stroke-linecap="round" stroke-width="4" d="M31.404 10.148a20 20 0 0 1-.017-7.917"></path><path class="stroke-current" stroke-linecap="round" stroke-width="5" d="M41.5 9.592a20 20 0 0 1-.347-6.916"></path></svg>
@@ -37,8 +37,8 @@ block content
             { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Veri Bilimi ve Analiz" },
             { img: "https://iaahbr.tmgrup.com.tr/0723ef/747/747/450/0/1814/1365?u=https://iahbr.tmgrup.com.tr/2026/01/22/yapay-zeka-tehlikesi-kapida-musktan-dunyayi-sarsacak-itiraf-insanligin-fisini-cekecek-1769114414543.jpg", title: "Blockchain Teknolojisi" }
           ]
-        .flex.flex-col.items-start.w-full.gap-6.pt-10(class="lg:flex-row lg:gap-8")
-          .slider-wrapper.flex.flex-col.gap-3.w-full(class="lg:w-[634px] px-[1rem] xl:px-0")
+        .flex.flex-col.items-start.w-full.gap-6.pt-10(class="lg:flex-row lg:gap-8 px-[1rem] xl:px-0 ")
+          .slider-wrapper.flex.flex-col.gap-3.w-full(class="lg:w-[634px] ")
             .default-slider.relative.overflow-hidden.w-full.max-w-full
               .slides-container.flex.transition-transform.duration-500.ease-in-out.h-full
                 each item, index in slides
@@ -99,51 +99,8 @@ block content
                     a.no-underline.color-dark.transition-colors.duration-200(href="#" class="hover:brand-red")
                       span.font-bold.text-sm.leading-tight(class="md:text-base")
                         | Apple Creator Studio nedir, ne işe yarar?
-        .news-infinite(class="mt-6 md:mt-10 lg:mt-12 px-[1rem] ")
-          .grid.gap-4.overflow-hidden(class="grid-cols-2 md:grid-cols-4 lg:grid-cols-4 md:gap-6") 
-            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
-              figure.flex.flex-col.m-0.p-0
-                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
-                  a.no-underline(href="")
-                    <img src="https://iaahbr.tmgrup.com.tr/9323e2/375/176/0/0/2048/962?u=https://iahbr.tmgrup.com.tr/2025/11/29/vodafonedan-5gde-yapay-zeka-destekli-musteri-deneyimi-1764404944393.jpg" alt="Vodafone'dan 5G'de yapay zeka destekli müşteri deneyimi" loading="lazy" class="news-card-image b-lazy w-full h-full object-cover b-loaded" width="375" height="176">
-                figcaption.flex.flex-col.gap-2.m-0(class="p-3 md:p-4")
-                  a.no-underline.color-dark.flex.flex-col(href="#")
-                    span.font-bold.text-base.line-clamp-2.leading-snug
-                      | Vodafone'dan 5G'de yapay zeka destekli müşteri deneyimi
-            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
-              figure.flex.flex-col.m-0.p-0
-                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
-                  a.no-underline(href="")
-                    <img src="https://iaahbr.tmgrup.com.tr/1b2c9c/375/176/0/0/864/404?u=https://iahbr.tmgrup.com.tr/2025/12/01/bir-alo-ile-hayatiniz-kararmasin-uzmanlardan-yeni-dolandiricilik-uyarisi-1764571113482.jpeg" alt="Bir 'alo' ile hayatınız kararmasın!" loading="lazy" class="news-card-image b-lazy w-full h-full object-cover b-loaded" width="375" height="176">
-                figcaption.flex.flex-col.gap-2.m-0(class="p-3 md:p-4")
-                  a.no-underline.color-dark.flex.flex-col.gap-5(href="#")
-                    span.font-bold.text-base.line-clamp-2.leading-snug
-                      | Bir 'alo' ile hayatınız kararmasın!
-                    .hashtag 
-                      span.text-sm
-                        | #Banka
-            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
-              figure.flex.flex-col.m-0.p-0
-                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
-                  a.no-underline(href="")
-                    <img src="https://iaahbr.tmgrup.com.tr/8e920a/375/176/0/0/2048/960?u=https://iahbr.tmgrup.com.tr/2025/11/27/turk-telekom-genclik-markasi-selfy-ile-7-farkli-universitede-ilk-5g-deneyimini-sundu-1764244188532.jpg" alt="Selfy ile 7 farklı üniversitede ilk 5G deneyimini sunuldu" loading="lazy" class="news-card-image w-full h-full object-cover rounded-t-sm">
-                figcaption.flex.flex-col.gap-2.m-0(class="p-3 md:p-4")
-                  a.no-underline.color-dark.flex.flex-col.gap-5(href="#")
-                    span.font-bold.text-base.line-clamp-2.leading-snug
-                      | Selfy ile 7 farklı üniversitede ilk 5G deneyimini sunuldu  
-                    .hashtag 
-                      span.text-sm
-                        | #Türkiye
-            .flex.rounded-sm.border.overflow-hidden.border-solid(class="border-mist bg-white")
-              figure.flex.flex-col.m-0.p-0
-                .news-img.w-full.overflow-hidden.m-0(class="h-[140px] sm:h-[207px] md:h-[115px] lg:h-[160px]")
-                  a.no-underline(href="")
-                    <img src="https://iaahbr.tmgrup.com.tr/964c6c/222/152/0/58/992/737?u=https://iahbr.tmgrup.com.tr/2025/12/03/1764758355458.jpg" alt="Türk Telekom teknolojisiyle engeller kalkıyor" loading="lazy" class="news-card-image w-full h-full object-cover rounded-t-sm">
-                figcaption.flex.flex-col.m-0(class="p-3 md:p-4")
-                  a.no-underline.color-dark.flex.flex-col.gap-5(href="#")
-                    span.font-bold.text-base.line-clamp-2.leading-snug
-                      | Türk Telekom teknolojisiyle engeller kalkıyor  
-                    .hashtag 
-                      span.text-sm
-                        | #Ebubekir Şahin
+        .news-infinite(class="mt-6 md:mt-10 lg:mt-12 px-[1rem]")
+          .grid.gap-4.overflow-hidden(class="grid-cols-2 md:grid-cols-4 lg:grid-cols-4 md:gap-6")
 
+
+           

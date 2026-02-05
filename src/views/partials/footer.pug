@@ -1,14 +1,13 @@
-footer.block.items-center.bg-bone.py-4.w-full.z-40.pb-10.px-4
-    .flex.flex-col.justify-between.items-center.mx-auto.w-full.mt-6.container.gap-6(class="lg:flex-row")
+footer.block.items-center.bg-bone.py-4.w-full.z-40.pb-10.px-4.min-h-auto
+    .flex.flex-col.justify-between.items-center.w-full.mt-6.container.gap-6(class=" lg:flex-row  xl:px-0")
         .logo
             a.inline-block(href="/index.html")
-                img(src="https://iahbr.tmgrup.com.tr/site/v2/i/ahaber-logo-2.png", alt="A Haber", width="52", height="60", loading="lazy", class="h-15 w-auto block")
+                img(src="https://iahbr.tmgrup.com.tr/site/v2/i/ahaber-logo-2.png", alt="A Haber", width="52", height="60", loading="lazy")
         social.flex.flex-col.items-center.justify-center.gap-5(class="lg:flex-row")
             nav.flex.items-center.font-normal.color-dark.text-sm.leading-none(class="lg:text-xs lg:font-semibold") 
                 | Bizi Takip Edin
             .icons.flex.items-center.gap-2
                 each platform in ['facebook', 'twitter', 'instagram', 'youtube', 'flipboard', 'rss']
-                    //- Düzenlenmiş hali: border ve border-solid eklendi
                     a(class=`${platform} w-10 h-10 flex items-center justify-center rounded-full bg-white border border-solid border-[#cacae4] no-underline hover:opacity-80 transition-opacity`, href="#")
                         if platform == 'facebook'
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" class="w-auto h-4" style="" fill="black"><path class="" d="M6.973 0a4.055 4.055 0 0 0-4.055 4.055v2.257H.748a.197.197 0 0 0-.197.198v2.98c0 .11.087.198.197.198h2.17v6.115c0 .108.087.197.197.197h2.98a.197.197 0 0 0 .198-.197V9.688h2.19c.09 0 .169-.062.19-.15l.746-2.98a.197.197 0 0 0-.191-.246H6.293V4.055a.68.68 0 0 1 .68-.68h2.28a.197.197 0 0 0 .196-.197V.198A.197.197 0 0 0 9.252 0h-2.28Z"></path></svg>
