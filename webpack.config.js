@@ -1,36 +1,31 @@
-// 🔧 WEBPACK YARDıMCı MODÜLLER
-const path = require('path');                        // Dosya yolu işlemleri için
-const HtmlWebpackPlugin = require('html-webpack-plugin');           // HTML dosyaları oluşturur
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');    // CSS'i ayrı dosyaya çıkarır
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');     // Her build'de dist/ klasörünü temizler
-const CopyWebpackPlugin = require('copy-webpack-plugin');           // Statik dosyaları kopyalar (JSON, resim, vb.)
+const path = require('path');                                     
+const HtmlWebpackPlugin = require('html-webpack-plugin');           
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');    
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');    
+const CopyWebpackPlugin = require('copy-webpack-plugin');           
 
-// 📦 WEBPACK YAPILANDIRMASI
 module.exports = (env, argv) => {
-  // Hangi modda çalışıyoruz? (development veya production)
   const isDevelopment = argv.mode === 'development';
 
   return {
-    // 🎯 ENTRY POINTS (Giriş Noktaları)
-    // Webpack bu dosyalardan başlayarak dependency graph oluşturur
+ 
     entry: {
-      index: './src/scripts/index.js',   // index.js → index.html için
-      detail: './src/scripts/detail.js', // detail.js → detail.html için
+      index: './src/scripts/index.js',  
+      detail: './src/scripts/detail.js', 
     },
 
-    // 📤 OUTPUT (Çıktı Ayarları)
     output: {
-      path: path.resolve(__dirname, 'dist'),  // Çıktı klasörü: dist/
-      filename: 'js/[name].js',               // JS dosya ismi: index.js, detail.js ([name] = entry adı)
-      publicPath: '/',                        // HTML'deki link/script yolları: /css/index.css, /js/index.js
-      clean: true,                            // Her build'de dist/ klasörünü temizle
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'js/[name].js',               
+      publicPath: '/',                        
+      clean: true,                            
     },
 
-    // 🔄 MODULE RULES (Dosya İşleme Kuralları)
+    //  MODULE RULES (Dosya İşleme Kuralları)
     // Webpack her dosya türünü nasıl işleyeceğini buradan öğrenir
     module: {
       rules: [
-        // 🟦 INDEX.SCSS için özel kural
+        //  INDEX.SCSS için özel kural
         {
           test: /index\.scss$/,  // Sadece index.scss dosyasını yakala
           use: [
@@ -52,7 +47,7 @@ module.exports = (env, argv) => {
           ],
         },
 
-        // 🟥 DETAIL.SCSS için özel kural
+        //  DETAIL.SCSS için özel kural
         {
           test: /detail\.scss$/,  // Sadece detail.scss dosyasını yakala
           use: [
@@ -73,7 +68,7 @@ module.exports = (env, argv) => {
           ],
         },
 
-        // 🟩 SADE CSS DOSYALARI (vendor CSS, normalize.css vb.)
+        //  SADE CSS DOSYALARI (vendor CSS, normalize.css vb.)
         {
           test: /\.css$/,       // .css uzantılı tüm dosyalar
           use: [
@@ -82,7 +77,7 @@ module.exports = (env, argv) => {
           ],
         },
 
-        // 🟨 PUG TEMPLATE'LERİ
+        // PUG TEMPLATE'LERİ
         {
           test: /\.pug$/,       // .pug uzantılı tüm dosyalar
           use: ['pug-loader'],  // Pug → HTML'e çevir
@@ -93,10 +88,10 @@ module.exports = (env, argv) => {
     // 🔌 PLUGINS (Eklentiler)
     // Webpack'in temel işlevlerini genişletir
     plugins: [
-      // 🧹 Her build'de dist/ klasörünü temizle
+      //  Her build'de dist/ klasörünü temizle
       new CleanWebpackPlugin(),
 
-      // 📄 INDEX.HTML oluştur
+      //  INDEX.HTML oluştur
       new HtmlWebpackPlugin({
         template: './src/views/pages/index.pug',  // Kaynak Pug dosyası
         filename: 'index.html',                   // Çıktı dosya adı
@@ -104,7 +99,7 @@ module.exports = (env, argv) => {
         minify: !isDevelopment,                   // Production'da minify et
       }),
 
-      // 📄 DETAIL.HTML oluştur
+      //  DETAIL.HTML oluştur
       new HtmlWebpackPlugin({
         template: './src/views/pages/detail.pug',
         filename: 'detail.html',
@@ -112,12 +107,12 @@ module.exports = (env, argv) => {
         minify: !isDevelopment,
       }),
 
-      // 🎨 CSS DOSYALARINI AYRI ÇIKART
+      //  CSS DOSYALARINI AYRI ÇIKART
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',  // Çıktı: dist/css/index.css, dist/css/detail.css
       }),
 
-      // 📋 STATİK DOSYALARI KOPYALA (JSON, resim, font vb.)
+      //  STATİK DOSYALARI KOPYALA (JSON, resim, font vb.)
       new CopyWebpackPlugin({
         patterns: [
           {
@@ -135,7 +130,7 @@ module.exports = (env, argv) => {
       }),
     ],
 
-    // 🖥️ DEVELOPMENT SERVER AYARLARI
+    //  DEVELOPMENT SERVER AYARLARI
     devServer: {
       static: {
         directory: path.join(__dirname, 'dist'),  // Sunulacak klasör
@@ -147,7 +142,7 @@ module.exports = (env, argv) => {
       watchFiles: ['src/**/*'],  // İzlenecek dosyalar (değişince yenile)
     },
 
-    // 🐛 SOURCE MAP (Hata ayıklama için)
+    //  SOURCE MAP (Hata ayıklama için)
     // Development: Kaynak kodları göster
     // Production: Kaynak kodları gizle (güvenlik)
     devtool: isDevelopment ? 'source-map' : false,

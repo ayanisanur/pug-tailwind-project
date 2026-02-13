@@ -17,8 +17,6 @@ module.exports = {
   theme: {
     extend: {
       ...baseConfig.theme.extend,
-
-      // index’e özel ekler
     },
   },
 
